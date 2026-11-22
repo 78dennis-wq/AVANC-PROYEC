@@ -11,9 +11,10 @@ html {
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #ffffff;
+    overflow-x: hidden;
 }
 
-
+/* --- ENCABEZADO --- */
 header {
     background-color: #ffffff;
     padding: 20px 40px 15px 40px;
@@ -62,7 +63,7 @@ nav a:hover {
     color: #eab308;
 }
 
-
+/* --- PORTADA --- */
 .portada {
     position: relative;
     display: flex;
@@ -94,7 +95,7 @@ nav a:hover {
     line-height: 1.5;
 }
 
-
+/* --- WHATSAPP --- */
 .whatsapp {
     position: absolute;
     right: 20px;
@@ -106,7 +107,7 @@ nav a:hover {
     height: 90px;
 }
 
-
+/* --- QUIENES SOMOS --- */
 .quienes-somos {
     width: 100%;
     display: flex;
@@ -130,21 +131,22 @@ nav a:hover {
 }
 
 .quienes-cuerpo {
-    width: 130%;
-    min-height: 500px;
-    padding: 90px 90px;
+    width: 100%;
+    min-height: 560px;
+    padding: 50px 60px;
     display: flex;
     align-items: flex-start;
-    background: linear-gradient(rgba(0.2, 0, 0, 0.10), rgba(0.2, 0, 0, 0.10)),
-                url("Imagenes/Logo-Empresa.jpg");
-    background-size: 120% auto;
-    background-position: -0% top;
+    background-color: #2b2b2b;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.18)),
+                      url("Imagenes/Logo-Empresa.jpg");
+    background-size: cover;
+    background-position: 85% center;
     background-repeat: no-repeat;
 }
 
 .quienes-contenido {
-    width: 47%;
-    max-width: 560px;
+    width: 48%;
+    max-width: 580px;
     text-align: center;
 }
 
@@ -171,7 +173,7 @@ nav a:hover {
     background-color: #000000;
 }
 
-
+/* --- UBICACIÓN Y CONTACTOS --- */
 .seccion-contacto {
     width: 100%;
     display: flex;
@@ -283,8 +285,8 @@ nav a:hover {
 }
 
 .wsp-mini img {
-    width: 60px;
-    height: 60px;
+    width: 30px;
+    height: 30px;
     display: block;
 }
 
@@ -312,7 +314,7 @@ nav a:hover {
     color: #e5e5e5;
 }
 
-/* --- MDO CELL--- */
+/* --- CELULARES --- */
 @media (max-width: 768px) {
     .encabezado-superior {
         flex-direction: column;
