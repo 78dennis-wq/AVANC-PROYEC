@@ -1,12 +1,120 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Comentarios - CATER - DEC</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <a>hola mundo</a>
-    
+
+    <header class="header-comentarios">
+        <div class="arriba">
+            <img src="Imagenes/LogoVerde.png" alt="Logo CATER - DEC" class="logo">
+            <h1>IMPORTADORA<br>CATER - DEC</h1>
+        </div>
+
+        <nav>
+            <a href="index.html#inicio">INICIO</a>
+            <a href="index.html#quienes-somos">QUIENES SOMOS</a>
+            <a href="index.html#productos">PRODUCTOS</a>
+            <a href="index.html#alquiler">ALQUILER</a>
+            <a href="index.html#contacto">CONTACTO</a>
+        </nav>
+    </header>
+
+    <div class="franja-negra-comentarios"></div>
+
+    <section id="comentarios" class="caja-principal">
+        <b><p class="subtitulo">COMENTARIOS</p></b>
+
+        <div id="lista" class="tarjetas">
+            <div class="tarjeta">
+                <h3>María López</h3>
+                <p class="estrellas">★★★★★ · 5/5</p>
+                <p>“¡Una experiencia excelente! Todo fue muy sencillo y la atención fue amable en todo momento. Lo recomiendo.”</p>
+            </div>
+
+            <div class="tarjeta">
+                <h3>Carlos Ramírez</h3>
+                <p class="estrellas">★★★★★ · 5/5</p>
+                <p>“Superó mis expectativas. Me gustó la calidad y el cuidado en cada detalle. ¡Volvería a elegirlo!”</p>
+            </div>
+
+            <div class="tarjeta">
+                <h3>Ana Martínez</h3>
+                <p class="estrellas">★★★★★ · 5/5</p>
+                <p>“Quedé muy contenta con la experiencia. Todo estuvo claro desde el principio y recibí una atención estupenda.”</p>
+            </div>
+
+            <div class="tarjeta">
+                <h3>Diego Torres</h3>
+                <p class="estrellas">★★★★★ · 5/5</p>
+                <p>“Muy recomendable. Fue fácil, rápido y justo lo que buscaba. Sin duda, una excelente elección.”</p>
+            </div>
+        </div>
+
+        <div class="formularios">
+            <form class="bloque-form" onsubmit="agregarComentario(event)">
+                <h3>Agregar un comentario</h3>
+
+                <label>Tu nombre:</label>
+                <input type="text" id="nombre" placeholder="Ej. Alan Brito Delgado" required>
+
+                <label>Calificación:</label>
+                <select id="estrellas">
+                    <option value="5">⭐⭐⭐⭐⭐·🤩 Excelente</option>
+                    <option value="4">⭐⭐⭐⭐·😊 Bueno</option>
+                    <option value="3">⭐⭐⭐·😐 Regular</option>
+                    <option value="2">⭐⭐·😞 Malo</option>
+                    <option value="1">⭐·😡 Pésimo</option>
+                </select>
+
+                <label>Tu comentario:</label>
+                <textarea id="texto" placeholder="Escribe tu comentario aquí..." required></textarea>
+
+                <button type="submit">Mandar comentario</button>
+            </form>
+        </div>
+    </section>
+
+    <div class="franja-negra-comentarios"></div>
+
+    <footer class="footer-comentarios">
+        <b><p>© 2026 CATER-DEC – Importación, Logística y Maquinaria Pesada. Todos los derechos reservados. Potosí – Bolivia.</p></b>
+    </footer>
+
+    <script>
+        function agregarComentario(e) {
+            e.preventDefault();
+
+            var nombre = document.getElementById("nombre").value;
+            var nota = document.getElementById("estrellas").value;
+            var texto = document.getElementById("texto").value;
+
+            var estrellasDibujo = "";
+            for (var i = 1; i <= 5; i++) {
+                if (i <= nota) {
+                    estrellasDibujo += "★";
+                } else {
+                    estrellasDibujo += "☆";
+                }
+            }
+
+            var lista = document.getElementById("lista");
+            var nuevaTarjeta = document.createElement("div");
+            nuevaTarjeta.className = "tarjeta";
+            nuevaTarjeta.innerHTML =
+                "<h3>" + nombre + "</h3>" +
+                "<p class='estrellas'>" + estrellasDibujo + " · " + nota + "/5</p>" +
+                "<p>“" + texto + "”</p>";
+
+            lista.appendChild(nuevaTarjeta);
+
+            document.getElementById("nombre").value = "";
+            document.getElementById("texto").value = "";
+        }
+    </script>
+
 </body>
 </html>
