@@ -303,6 +303,9 @@
         padding: 8px 24px 12px 24px;
     }
 
+    .enlace-comentarios{
+        color: black; 
+    }
     .comentarios-linea {
         font-size: 14px;
         font-weight: bold;
