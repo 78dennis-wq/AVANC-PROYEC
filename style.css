@@ -307,7 +307,6 @@ nav a:hover {
 .enlace-comentarios {
     color: #ffffff;
     text-decoration: none;
-    cursor: pointer;
 }
 
 .enlace-comentarios:hover {
@@ -325,15 +324,10 @@ nav a:hover {
     color: #e5e5e5;
 }
 
-/* --- VISTA DE COMENTARIOS EN LA MISMA PÁGINA --- */
-.oculto {
-    display: none;
-}
-
+/* --- SECCIÓN DE COMENTARIOS --- */
 .header-comentarios {
     background-color: #000000;
     color: #ffffff;
-    padding: 20px 40px 15px 40px;
 }
 
 .header-comentarios h1,
@@ -363,7 +357,7 @@ nav a:hover {
 .subtitulo {
     font-size: 14px;
     color: #111827;
-    margin-bottom: 15px;
+    margin-bottom: 18px;
 }
 
 .tarjetas {
