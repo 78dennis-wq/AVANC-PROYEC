@@ -20,6 +20,7 @@
             <a href="#productos">PRODUCTOS</a>
             <a href="#alquiler">ALQUILER</a>
             <a href="#contacto">CONTACTO</a>
+            <a href="#comentarios" onclick="abrirVentanaComentarios(event)">COMENTARIOS</a>
         </nav>
     </header>
 
@@ -107,10 +108,28 @@
         </div>
 
         <footer class="pie-contacto">
-            <div class="comentarios-linea">Comentarios &#9661;</div>
+            <div class="comentarios-linea">
+                <a href="#comentarios" onclick="abrirVentanaComentarios(event)" class="enlace-comentarios">Comentarios &#9661;</a>
+            </div>
             <b><p class="derechos-texto">© 2026 CATER-DEC – Importación, Logística y Maquinaria Pesada. Todos los derechos reservados. <br> Potosí – Bolivia.</p></b>
         </footer>
     </section>
+
+    <script>
+        function abrirVentanaComentarios(e) {
+            e.preventDefault();
+            const ancho = 1100;
+            const alto = 720;
+            const izquierda = Math.round((window.screen.width - ancho) / 2);
+            const arriba = Math.round((window.screen.height - alto) / 2);
+
+            window.open(
+                "comentarios.html#comentarios",
+                "VentanaComentariosCaterDec",
+                `width=${ancho},height=${alto},left=${izquierda},top=${arriba},resizable=yes,scrollbars=yes`
+            );
+        }
+    </script>
 
 </body>
 </html>
